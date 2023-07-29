@@ -21,12 +21,14 @@
         <module>program-skills-oop</module>
         <module>program-skills-javanotes</module>
         <module>program-skills-common</module>
-        <module>program-skills-03-logging</module>
+        <module>program-skills-log</module>
         <module>program-skills-mock</module>
         <module>program-skills-spring</module>
         <module>program-skills-utils</module>
         <module>program-skills-pattern</module>
         <module>program-skills-mybatis</module>
+        <module>program-skills-log4j2</module>
+        <module>program-skills-jdk8new</module>
     </modules>
 
 
@@ -89,29 +91,6 @@
         </dependency>
         <!-- spring end-->
 
-
-        <!--log4j start-->
-        <!-- slf4j-api -->
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>1.7.25</version>
-        </dependency>
-
-        <!-- slf4j-log4j12 -->
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-log4j12</artifactId>
-            <version>1.7.25</version>
-        </dependency>
-
-        <!-- log4j -->
-        <dependency>
-            <groupId>log4j</groupId>
-            <artifactId>log4j</artifactId>
-            <version>1.2.17</version>
-        </dependency>
-        <!--log4j end-->
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-collections4</artifactId>

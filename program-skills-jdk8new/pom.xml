@@ -9,7 +9,8 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>program-skills-common</artifactId>
+    <artifactId>program-skills-jdk8new</artifactId>
+
 
 
 </project>
