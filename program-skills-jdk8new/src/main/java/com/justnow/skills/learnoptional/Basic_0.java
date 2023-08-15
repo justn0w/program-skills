@@ -25,9 +25,12 @@ public class Basic_0 {
         Optional<Object> empty = Optional.empty();
 
         Car car = null;
+
+        Optional.ofNullable(car.getInsurance()).ifPresent(System.out::println);
+
         Optional<Car> optCar = Optional.of(car);
 
-        Optional<Car> optCar2 = Optional.ofNullable(car);
+        Optional<Car> optCar2 = Optional.of(car);
 
         Consumer<Integer> consumer = System.out::println;
         List<Integer> list = Arrays.asList(1, 2, 3, 4, 5);
@@ -36,7 +39,8 @@ public class Basic_0 {
                 .map(x -> Utils.getName())
                 .collect(Collectors.toList());
 
-        Consumer<Integer> consumer1  =  i -> System.out.println(i);
+        Consumer<Integer> consumer1  = System.out::println;
+
 
 
     }
@@ -55,7 +59,17 @@ class Insurance {
 //car类
 class Car {
     private Insurance insurance;
-    public Insurance getInsurance() { return insurance; }
+    public Insurance getInsurance() {
+        try {
+            return insurance;
+        } catch (Exception e) {
+            System.out.println("test");
+        }
+
+        return new Insurance();
+
+
+    }
 }
 
 //people类

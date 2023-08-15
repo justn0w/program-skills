@@ -50,7 +50,14 @@ public class LambdaDemo {
     public static void method01() {
 
         List<Apple> list = getListApple();
-        list.sort(new AppleComparator());
+        //list.sort(new AppleComparator());
+
+        list.sort(new Comparator<Apple>() {
+            @Override
+            public int compare(Apple a1, Apple a2) {
+                return a1.getWeight().compareTo(a2.getWeight());
+            }
+        });
     }
 
     //2 使用匿名类
