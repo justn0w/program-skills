@@ -48,7 +48,7 @@ public class FunctionInterfacePredicate {
         //1 函数式接口的实例
         Consumer<String> consumerPrint =  (String s) -> System.out.println(s);
 
-        //2 使用函数式接口做为入参
+        //2 使用lambda表达式作为入参
         forEach(lists, consumerPrint);
 
         //3 简洁模式
