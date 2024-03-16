@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+<!--    <bean id="xmlConfigService" class="com.justnow.skills._01_generics.typemethod.config.XmlConfigServiceImpl" />-->
+
+<!--    <bean id="configUtil" class="com.justnow.skills._01_generics.typemethod.config.ConfigUtil" scope="singleton">-->
+<!--        <property name="configService" ref="xmlConfigService"/>-->
+<!--    </bean>-->
+
+
+    <bean id="promotionService" class="com.justnow.skills._03_design_pattern.designPrinciple._dependencyInversion.PromotionService"/>
+    <bean id="unitPromotionValidHandler" class="com.justnow.skills._03_design_pattern.designPrinciple._dependencyInversion.UnitPromotionValidHandler"/>
+    <bean id="sumPromotionValidHandler" class="com.justnow.skills._03_design_pattern.designPrinciple._dependencyInversion.SumPromotionValidHandler"/>
+
+    <bean id="validPromotionFactory" class="com.justnow.skills._03_design_pattern.designPrinciple._dependencyInversion.ValidPromotionFactory">
+        <property name="handlerMap">
+            <map>
+                <entry key="1" value-ref="unitPromotionValidHandler"/>
+                <entry key="2" value-ref="sumPromotionValidHandler"/>
+            </map>
+        </property>
+    </bean>
+
+</beans>

@@ -29,6 +29,9 @@
         <module>program-skills-mybatis</module>
         <module>program-skills-log4j2</module>
         <module>program-skills-jdk8new</module>
+        <module>program-skills-practice</module>
+        <module>program-skills-sourcecode</module>
+        <module>program-skills-algorithm</module>
     </modules>
 
 
